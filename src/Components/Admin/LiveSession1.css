@@ -1,0 +1,97 @@
+.live-session {
+  padding: 20px;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+.page-header h2 {
+  margin-bottom: 4px;
+}
+
+.page-header p {
+  color: #6b7280;
+}
+
+/* Stats */
+.session-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.stat-box {
+  background: white;
+  padding: 16px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.stat-box h3 {
+  font-size: 22px;
+}
+
+/* Filter */
+.session-filter {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.session-filter select,
+.session-filter button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  background: white;
+}
+
+/* Table */
+.session-table {
+  background: white;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #f9fafb;
+}
+
+th, td {
+  padding: 12px;
+  font-size: 14px;
+  text-align: left;
+}
+
+tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+td span {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Status */
+.status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.status.scheduled {
+  background: #e0edff;
+  color: #2563eb;
+}
+
+/* Actions */
+.actions a {
+  margin-right: 10px;
+  color: #2563eb;
+  text-decoration: none;
+}
