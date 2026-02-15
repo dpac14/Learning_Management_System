@@ -3,7 +3,7 @@ import Hero from '../../components/students/Hero';
 
 const Home = () => {
   return (
-    <div className='flex flex-col itmes-center space-y-7'>
+    <div className='flex flex-col itmes-center space-y-7 text-center'>
       <Hero />
     </div>
   );
