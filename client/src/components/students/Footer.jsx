@@ -16,7 +16,7 @@ const Footer = () => {
             <li><a href="#">About us </a></li>
             <li><a href="#">Contact us</a></li>
             <li><a href="#">Privacy Policy</a></li>
-           
+
           </ul>
         </div>
         <div className='hidden md:flex flex-col items-start w-full'>
