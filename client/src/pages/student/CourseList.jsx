@@ -2,11 +2,12 @@ import React, { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
 import SearchBar from '../../components/students/SearchBar';
 import { useParams } from 'react-router-dom';
+import CourseCard from '../../components/students/CourseCard';
 
 const CourseList = () => {
 
-  const { navigate } = useContext(AppContext)
-  const {input} = useParams()
+  const { navigate, allCourses } = useContext(AppContext)
+  const { input } = useParams()
 
   return (
     <>
@@ -18,7 +19,9 @@ const CourseList = () => {
               <span className='text-blue-600 cursor-pointer' onClick={() => navigate('/')}>Home </span> / <span>Course List</span> </p>
           </div>
           <SearchBar data={input} />
-
+        </div>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-16 gap-3 px-2 md:p-0' >
+          {allCourses.map((course,index) => <CourseCard key={index} course={course} />)}
         </div>
       </div>
     </>
