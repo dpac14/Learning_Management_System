@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { AppContext } from '../../context/AppContext';
 import SearchBar from '../../components/students/SearchBar';
 import { useParams } from 'react-router-dom';
@@ -8,6 +8,10 @@ const CourseList = () => {
 
   const { navigate, allCourses } = useContext(AppContext)
   const { input } = useParams()
+  const [filteredCourse, setFilteredCourse] = useState([])
+  useEffect(() => ({
+
+  }, [allCourses, input]))
 
   return (
     <>
