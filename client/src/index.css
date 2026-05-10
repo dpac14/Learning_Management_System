@@ -21,8 +21,14 @@
 
   --text-default: 15px;
   --text-default--line-height: 21px;
-  --h-section-height: '500px';
 
+  --spacing-section-height: 500px;
+
+
+  /* max-width */
+ --max-width-course-card: 424px;
+/* boxshadow */
+--shadow-custom-card: 0px 4px 15px 2px rgba(0,0,0,0.1);
 }
 
 @utility grid-auto-fit {
