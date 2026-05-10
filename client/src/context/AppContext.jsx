@@ -49,7 +49,7 @@ export const AppContextProvider = (props) => {
         let totalLectures =0;
         course.courseContent.forEach(chapter => {
             if(Array.isArray(chapter.chapterContent)){
-                totalLectures += chapter.chapterContent,length;
+                totalLectures += chapter.chapterContent.length;
             }
         })
         return totalLectures;
