@@ -10,6 +10,7 @@ const CourseDetails = () => {
   const { id } = useParams();
   const [courseData, setCourseData] = useState(null)
   const [openSection, setOpenSections] = useState({})
+  const [isAlreadyEnrolled, setIsAlreadyEnrolled] = useState(true)
 
   const { allCourses, calculateRating, calculateNoOfLectures, calculateCourseDuration, calculateChapterTime, currency } = useContext(AppContext)
 
@@ -139,6 +140,19 @@ const CourseDetails = () => {
               </div>
 
 
+            </div>
+
+            <button className='md:mt-6 mt-4 w-full py-3 rounded bg-blue-600 text-white font-medium'>{isAlreadyEnrolled ? 'Already Enrolled' : 'Enrolled Now'}</button>
+
+            <div>
+              <p>What's in the course ?</p>
+              <ul>
+                <li>Lifetime Access with free updates.</li>
+                <li>Step-by-step, hand-on project guidance.</li>
+                <li>Downloadable resources and source code</li>
+                <li>Quizzes to test your knowledge</li>
+                <li>Certificate of completion.</li>
+              </ul>
             </div>
 
           </div>
