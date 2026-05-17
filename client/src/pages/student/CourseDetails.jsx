@@ -61,6 +61,8 @@ const CourseDetails = () => {
           <p className='text-sm'>Course By <span className='text-blue-600 underline'>ChaiOrCode</span></p>
           <div className='pt-8 text-gray-800'>
             <h2 className='ttext-xl font-semibold'>Course Structure</h2>
+
+
             <div className='pt-5'>
               {courseData.courseContent.map((chapter, index) => (
                 <div key={index} className=' border border-gray-300 bg-white mb-2 rounded'>
@@ -78,7 +80,7 @@ const CourseDetails = () => {
                       {chapter.chapterContent.map((lecture, i) => (
                         <li key={i} className='flex items-start gap-2 py-1'>
                           <img src={assets.play_icon} alt="paly icon" className='w-4 h-4 mt-1' />
-                          <div className='flex-item-center justify-between w-full text-gray-800 text-xs md:text-default'>
+                          <div className='flex items-center justify-between w-full text-gray-800 text-xs md:text-default'>
                             <p>{lecture.lectureTitle}</p>
                             <div className='flex gap-2'>
                               {lecture.isPreviewFree && <p
