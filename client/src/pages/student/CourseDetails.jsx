@@ -11,7 +11,7 @@ const CourseDetails = () => {
 
   const { id } = useParams();
   const [courseData, setCourseData] = useState(null)
-  const [openSection, setOpenSections] = useState({})
+  const [openSections, setOpenSections] = useState({})
   const [isAlreadyEnrolled, setIsAlreadyEnrolled] = useState(false)
   const [playerData, setPlayerData] = useState(null)
 
@@ -60,7 +60,7 @@ const CourseDetails = () => {
           </div>
           <p className='text-sm'>Course By <span className='text-blue-600 underline'>ChaiOrCode</span></p>
           <div className='pt-8 text-gray-800'>
-            <h2 className='ttext-xl font-semibold'>Course Structure</h2>
+            <h2 className='text-xl font-semibold'>Course Structure</h2>
 
 
             <div className='pt-5'>
@@ -68,14 +68,14 @@ const CourseDetails = () => {
                 <div key={index} className=' border border-gray-300 bg-white mb-2 rounded'>
                   <div className='flex items-center justify-between px-4 py-3 cursor-pointer select-none' onClick={() => toggleSection(index)}>
                     <div className='flex items-center gap-2'>
-                      <img className={`transform transition-tranform ${openSection[index] ? 'rotate-180' : ''}`}
+                      <img className={`transition-transform ${openSections[index] ? 'rotate-180' : ''}`}
                         src={assets.down_arrow_icon} alt="arroe icon" />
                       <p className='font-medium md:text-base text-sm'>{chapter.chapterTitle}</p>
                     </div>
                     <p className='text-sm md:text-default'>{chapter.chapterContent.length} lectures -{calculateChapterTime(chapter)}</p>
                   </div>
 
-                  <div className={`overflow-hidden transition-all duration-300 ${openSection[index] ? 'max-h-96' : 'max-h-0'}`}>
+                  <div className={`overflow-hidden transition-all duration-300 ${openSections[index] ? 'max-h-96' : 'max-h-0'}`}>
                     <ul className='list-disc md:pl-10 pl-4 pr-4 py-2 text-gray-600 border-t border-gray-300'>
                       {chapter.chapterContent.map((lecture, i) => (
                         <li key={i} className='flex items-start gap-2 py-1'>
@@ -113,7 +113,7 @@ const CourseDetails = () => {
 
 
         {/* right colunm */}
-        <div className='max-w-course-card z-10 shadow-custom-card rounded-t md:rounded-none overflow-hidden bg-white min-w[300px] sm:min-w-[420px]'>
+        <div className='max-w-course-card z-10 shadow-custom-card rounded-t md:rounded-none overflow-hidden bg-white min-w-[300px] sm:min-w-[420px]'>
 
           {
             playerData ?
@@ -131,7 +131,7 @@ const CourseDetails = () => {
             <div className='flex gap-3 items-center pt-2'>
               <p className='text-gray-800 md:text-4xl text-2xl font-semibold'>{currency}{(courseData.coursePrice - courseData.discount * courseData.coursePrice / 100).toFixed(2)}</p>
               <p className=' md:text-lg text-gray-500 line-through'>{currency}{courseData.coursePrice}</p>
-              <p className='md:text-lg text-gray-500'>{currency}{courseData.discount}% off</p>
+              <p className='md:text-lg text-gray-500'>{courseData.discount}% off</p>
             </div>
 
             <div className='flex items-center text-sm md:text-default gap-4 pt-2 md:pt-4 text-gray-500'>
