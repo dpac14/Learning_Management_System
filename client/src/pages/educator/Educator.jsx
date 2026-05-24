@@ -13,7 +13,7 @@ const Educator = () => {
         <div className='flex-1'>
            {<Outlet />}
         </div>
-       
+
       </div>
       <Footer />
     </div>
