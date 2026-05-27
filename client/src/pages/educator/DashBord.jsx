@@ -50,9 +50,9 @@ const DashBord = () => {
             <p className="text-base text-gray-500">Total Earnings</p>
           </div>
         </div>
-
-
       </div>
+
+
       <div>
         <h2 className='pb-4 text-lg font-medium'>Latest Enrolmenta</h2>
         <div className='flex flex-col items-center max-w-4xl w-full overflow-hidden rounded-md bg-white border border-gray-500/20'>
@@ -79,11 +79,8 @@ const DashBord = () => {
                   </td>
                 </tr>
               ))}
-
             </tbody>
-
           </table>
-
         </div>
       </div>
     </div>
